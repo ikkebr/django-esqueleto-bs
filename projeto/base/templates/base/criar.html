@@ -1,0 +1,18 @@
+{% extends "base/base.html" %}
+
+{% block title %}Cadastro de Usuário{% endblock %}
+
+{% block content %}
+<h1>Cadastro de Usuário</h1>
+<p>Preencha o formulário para criar um usuário.</p>
+<form method="post" action="{% url 'cadastro' %}">
+	{% csrf_token %}
+	<table class='table'>
+		{{ form }}
+	</table>
+
+	<input class='btn btn-primary' type="submit" value="login" />
+	<input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+{% endblock %}

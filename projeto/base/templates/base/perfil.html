@@ -1,0 +1,8 @@
+{% extends 'base/base.html' %}
+
+{% block title %}{{ user.username }}{% endblock %}
+
+{% block content %}
+	<h1>Olá {{ user.username }}!</h1>
+	<p class="lead">Você está logado.</p>	
+{% endblock %}
